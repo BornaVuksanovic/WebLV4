@@ -1,0 +1,240 @@
+body{
+    margin: 0;
+    padding: 0;
+}
+table, th, td {
+  border: 1px solid rgb(161, 0, 0);
+}
+th, td {
+  padding: 10px;
+}
+td {
+  text-align: center;
+}
+main {
+  display: flex;
+  flex-direction: column; /* Sve ide jedno ispod drugog */
+  gap: 20px;
+}
+
+aside img {
+  max-width: 100%; /* Da slike ne pobjegnu iz okvira */
+  height: auto;
+  border-radius: 10px;
+  opacity: 0.7;
+  cursor: pointer;
+}
+
+/* DESKTOP VERZIJA (Ekran širi od 768px) */
+@media (min-width: 768px) {
+  main {
+    display: grid; 
+    grid-template-columns: 3fr 1fr; /* Tablica zauzima 3 dijela, slike 1 dio */
+    grid-template-areas: 
+      "sec asd"
+      "art art";
+  }
+
+
+  article { grid-area: art; }
+  section { grid-area: sec; }
+  aside   { grid-area: asd; }
+}
+.forma-kontejner {
+    max-width: 500px;
+    margin: 40px auto;
+    padding: 30px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    background-color: #f9f9f9;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+.forma-kontejner label {
+    font-weight: bold;
+    display: block;
+    margin-bottom: 8px;
+    color: #333;
+}
+
+.forma-kontejner input[type="text"],
+.forma-kontejner input[type="number"],
+.forma-kontejner input[type="file"],
+.forma-kontejner textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box; 
+    font-family: inherit;
+}
+
+.forma-kontejner button {
+    background-color: #b1df0b; /* Tvoja zelena! */
+    color: black;
+    font-size: 16px;
+    font-weight: bold;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 100%;
+    transition: background-color 0.3s;
+}
+
+.forma-kontejner button:hover {
+    background-color: #9ac20a;
+}
+
+.poruka-box {
+    text-align: center;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+nav ul{
+    display: flex;
+    gap: 20px;
+    background-color: #b1df0b;
+    overflow: hidden;
+    margin: 0;
+    padding: 0;
+}
+
+
+
+li {
+  float: left;
+}
+
+li a, .dropbtn {
+  display: inline-block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+li a:hover, .dropdown:hover .dropbtn {
+  background-color: red;
+}
+
+li.dropdown {
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(7, 214, 128, 0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+}
+
+.dropdown-content a:hover {background-color: #f1f1f1;}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+.filter-sekcija {
+    background: #f4f4f4;
+    padding: 15px;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+}
+.filter-grupa {
+    margin-bottom: 10px;
+    color: #000;
+}
+#btnFiltriraj {
+    padding: 10px 20px;
+    background-color: #28a745;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 4px;
+}
+#btnFiltriraj:hover {
+    background-color: #218838;
+}
+
+#kosarica-kontejner {
+    background-color: #fff;
+    border: 2px solid #28a745;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+#lista-kosarice {
+    list-style: none;
+    padding: 0;
+}
+
+#lista-kosarice li {
+    padding: 8px 0;
+    border-bottom: 1px solid #eee;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 0.9em;
+}
+
+.btn-ukloni {
+    background: #ff4d4d;
+    color: white;
+    border: none;
+    padding: 2px 8px;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+#btnPotvrdiPosudbu {
+    width: 100%;
+    padding: 10px;
+    background-color: #28a745;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+    font-size: 16px;
+    text-align: left;
+}
+
+table th {
+    background-color: #4CAF50; /* Boja koja odgovara tvom gumbu */
+    color: white;
+    padding: 12px;
+}
+
+table td {
+    border: 1px solid #ddd;
+    padding: 10px;
+}
+
+table tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+table tr:hover {
+    background-color: #ddd;
+}
+
+/*
